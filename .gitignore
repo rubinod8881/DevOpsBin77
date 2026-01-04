@@ -1,0 +1,11 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Data files (keep your repo clean)
+*.xlsx
+*.csv
+
+# Environments
+venv/
+.env
