@@ -1,0 +1,16 @@
+SELECT 
+    emp_dept AS "Department", 
+    SUM(emp_salary) AS "Total Base Salary",
+    SUM(salary_bonus) AS "Total Bonuses",
+    SUM(emp_salary + salary_bonus) AS "Total Compensation" FROM employee,
+   GROUP BY emp_dept,emp_salary,
+   ORDER BY SUM(emp_salary + emp_bonus) DESC;
+
+SELECT 
+    emp_dept AS "Department", 
+    SUM(emp_salary) AS "Total Base Salary", 
+    SUM(emp_bonus) AS "Total Bonuses", 
+    SUM(emp_salary + IFNULL(emp_bonus, 0)) AS "Total_Department_Compensation"
+FROM employee
+GROUP BY emp_dept
+ORDER BY Total_Deprtment_Compensation DESC;
